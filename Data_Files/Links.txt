@@ -1,0 +1,15 @@
+useful code:
+https://www.kaggle.com/shkkk3/epl-the-soccer-ball-is-round 
+https://www.kaggle.com/saife245/football-match-prediction 
+
+useful papers:
+https://iopscience.iop.org/article/10.1088/1757-899X/226/1/012099/meta
+https://link.springer.com/chapter/10.1007/978-981-33-6912-2_16
+https://wires.onlinelibrary.wiley.com/doi/full/10.1002/widm.1380 (review of ml for sport prediction)
+
+useful guides about code/best practices:
+https://blog.ml.cmu.edu/2020/08/31/2-data-exploration/
+https://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
+
+possibly not useful:
+https://link.springer.com/article/10.1007/s42452-019-1821-5
