@@ -1,11 +1,11 @@
-Date,HomeTeam,AwayTeam
-15 Jan 22,Aston Villa,Man United
-15 Jan 22,West Ham,Leeds
-15 Jan 22,Norwich,Everton
-15 Jan 22,Brighton,Crystal Palace
-15 Jan 22,Wolves,Southampton
-15 Jan 22,Liverpool,Brentford
-15 Jan 22,Tottenham,Arsenal
-15 Jan 22,Man City,Chelsea
-15 Jan 22,Newcastle,Watford
-15 Jan 22,Burnley,Leicester
+Date,HomeTeam,AwayTeam,FTR
+15-Jan-22,Aston Villa,Man United,A
+15-Jan-22,West Ham,Leeds,H
+15-Jan-22,Norwich,Everton,A
+15-Jan-22,Brighton,Crystal Palace,A
+15-Jan-22,Wolves,Southampton,A
+15-Jan-22,Liverpool,Brentford,A
+15-Jan-22,Tottenham,Arsenal,H
+15-Jan-22,Man City,Chelsea,H
+15-Jan-22,Newcastle,Watford,H
+15-Jan-22,Burnley,Leicester,A
