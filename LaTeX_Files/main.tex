@@ -1,17 +1,16 @@
 \documentclass{article}
-
-
+\usepackage{geometry}
 \usepackage{arxiv}
 \usepackage[numbers]{natbib}
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \hypersetup{
-    % colorlinks=true,
+    colorlinks=true,
     linkcolor=black,
     citecolor=black,
     filecolor=black,      
-    urlcolor=blue,
+    urlcolor=black,
     pdftitle={Beat the Bookie},
     breaklinks=true,
     pdfpagemode=FullScreen,
@@ -168,32 +167,36 @@ Traditionally, \sw{gridsearch} has been a popular and well-known option for hype
 
 The hyperparameter search space was evaluated on our validation set, which contained roughly 3 seasons worth of data. The function class for each model was restricted to prevent overfitting. For the \gls{cnn}, we tested different numbers of nodes (ranging from 32 to 256), sigmoid or softmax activation functions and 4 different optimizers (Adam, Rmsprop, Adagrad, SGD) as these were some of the most important hyperparameters \cite{laumediumCNNtuning}. In particular, a good optimizer is very important to ensure the models is trained optimally. Although Adam is overall a very good optimizer given its use of momentum and adaptive learning rate, it is not always the best, hence the need to test several optimizers. The \sw{Optuna} ‘\sw{study}’ was set to maximise the classification accuracy as this was what we would evaluate our model by on the test set. 
 
+\addtolength{\headsep}{-5mm}
 \subsection{Model Training}
 \label{modeltraining}
 
-\vspace{-0.5em}
+\vspace{-0.6em}
 The \gls{cnn} was trained on our training set consisting of roughly 13 seasons worth of data which past research indicated would be more than sufficient \cite{horvat2020use}. The model was trained by using the built in \sw{fit} method for 20 epochs with the Adam optimizer and the default learning rate of 0.001. Categorical cross entropy was used as the loss function.
 
-\vspace{-0.5em}
+\vspace{-0.6em}
 \subsection{Model Evaluation}
 \label{modeleval}
 
+\vspace{-0.6em}
 The final model was evaluated using classification accuracy on the test set. This was used as it was an easily interpretable measure that provided a sufficient way to compare models (given that the dataset is not severely imbalanced). Furthermore, this is widely used in past research \cite{horvat2020use}, hence allowing us to easily compare our results in the next section. Other evaluation metrics were considered, for instance logarithmic loss which penalises false classifications and F1 score which combines precision and recall. However, classification accuracy was used for the reasons aforementioned \cite{mishramediummetrics}. 
 
-\vspace{-1em}
+\vspace{-1.1em}
 \section{Results}
 \label{results}
 
-\vspace{-0.5em}
+\vspace{-0.6em}
 \subsection{Optimal Model Analysis}
 \label{optimalmodel}
 
+\vspace{-0.6em}
 Our best model was our \gls{cnn}, consisting of a single \sw{conv1d} hidden layer with 32 nodes with sigmoid activation and optimized using Adam. This model was able to achieve a high accuracy of 52.7\%, very close to the gold standard of 53\%. It's training and validation accuracies were very close to the test accuracy, indicating the model was trained well and is able to generalise.
 
 \vspace{-1em}
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.9\linewidth]{Images/Figure 4.jpeg}
+    \vspace{-0.9em}
     \caption{ROC curve comparison across classes.}
     \label{fig:ROC}
 \end{figure}
@@ -201,7 +204,8 @@ Our best model was our \gls{cnn}, consisting of a single \sw{conv1d} hidden laye
 \vspace{-1em}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.9\linewidth]{Images/Figure 5.jpeg}
+    \includegraphics[width=0.95\linewidth]{Images/Figure 5.jpeg}
+    \vspace{-0.9em}
     \caption{Precision-recall curve comparison across classes.}
     \label{fig:precisionrecall}
 \end{figure}
